@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Bootstrap 项目：动漫">
+    <meta name="author" content="李悦">
+    <meta name="renderer" content="webkit">
+    <link rel="icon" href="/images/favicon.ico">
+
+    <title>动漫</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/cartoon.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $.ajax({
+          url: '/ly/Recommend/get/',
+          data: {
+            adpos: 907,
+            num: 24,
+            pool_id: 302
+          },
+          success(data){
+            let obj = JSON.parse(data);
+
+            console.log(obj);
+          },
+          error(error){
+            console.log(error);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
