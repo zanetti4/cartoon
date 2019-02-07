@@ -1,0 +1,49 @@
+@import "variables.less";
+@import "mixins.less";
+
+/* ===========================================================
+	首页
+======================================================== */
+/* 强档推荐 */
+.recomTit {
+	small {color: @brand-warning;}
+}
+.recomIndi {background: url(../images/line.jpg) repeat-x left center;}
+.recomItem {border: none;}
+.recomItem-cover {
+	//.show();
+	border: solid 1px #BEBEBE;
+	position: relative;
+	z-index: 10;
+	div {
+		position: absolute;
+		z-index: 20;
+		bottom: 0;
+		left: 0;
+		font-size: @font-size-small;
+		color: white;
+		padding-right: 10px;
+		background-color: rgba(0,0,0,0.6);
+		width: 100%;
+		line-height: 2;
+	}
+	&:hover {
+		border-color: #FF9A6A;
+		img {filter: brightness(0.8);}
+	}
+}
+
+.recomItemDescription {
+	color: #999;
+	font-size: @font-size-small;
+}
+
+.recomItem-des {
+	.recomItemDescription;
+	margin: 3px 0;
+}
+.recomItem-tag {
+	.recomItemDescription;
+	margin-right: 10px;
+	&:last-child {margin-right: 0;}
+}
