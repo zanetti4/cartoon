@@ -8,7 +8,26 @@
 .recomTit {
 	small {color: @brand-warning;}
 }
-.recomIndi {background: url(../images/line.jpg) repeat-x left center;}
+.recomIndi {
+	background: url(../images/line.jpg) repeat-x left center;
+	margin-top: 27px;
+	ol {
+		position: static;
+		margin-bottom: 0;
+		width: 15%;
+		background-color: @body-bg;
+		.center-block();
+		li {
+			border: none;
+			background-color: #E5E3E1;
+			box-shadow: 0 1px 0 #CDCAC9 inset;
+			&.active {
+				background-color: @gray;
+				box-shadow: 0 1px 0 #555 inset;
+			}
+		}
+	}
+}
 .recomItem {border: none;}
 .recomItem-cover {
 	//.show();
@@ -46,4 +65,24 @@
 	.recomItemDescription;
 	margin-right: 10px;
 	&:last-child {margin-right: 0;}
+}
+
+.arrowShadow(@lenX: 6px){
+	box-shadow: @lenX 0 12px rgba(0,0,0,0.6);
+}
+
+.recomCon {
+	position: relative;
+	z-index: 20;
+	.carousel-control {
+		background: white;
+		width: 4%;
+		color: currentcolor;
+		&:hover {
+			.opacity(1);
+			span.glyphicon {color: @brand-warning;}
+		}
+	}
+	.left {.arrowShadow;}
+	.right {.arrowShadow(-6px);}
 }

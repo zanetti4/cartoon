@@ -7,6 +7,25 @@
 }
 .recomIndi {
   background: url(../images/line.jpg) repeat-x left center;
+  margin-top: 27px;
+}
+.recomIndi ol {
+  position: static;
+  margin-bottom: 0;
+  width: 15%;
+  background-color: #F8F8F8;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.recomIndi ol li {
+  border: none;
+  background-color: #E5E3E1;
+  box-shadow: 0 1px 0 #CDCAC9 inset;
+}
+.recomIndi ol li.active {
+  background-color: #555555;
+  box-shadow: 0 1px 0 #555 inset;
 }
 .recomItem {
   border: none;
@@ -50,4 +69,26 @@
 }
 .recomItem-tag:last-child {
   margin-right: 0;
+}
+.recomCon {
+  position: relative;
+  z-index: 20;
+}
+.recomCon .carousel-control {
+  background: white;
+  width: 4%;
+  color: currentcolor;
+}
+.recomCon .carousel-control:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.recomCon .carousel-control:hover span.glyphicon {
+  color: #FF9A6A;
+}
+.recomCon .left {
+  box-shadow: 6px 0 12px rgba(0, 0, 0, 0.6);
+}
+.recomCon .right {
+  box-shadow: -6px 0 12px rgba(0, 0, 0, 0.6);
 }
