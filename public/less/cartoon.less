@@ -10,11 +10,11 @@
 }
 .recomIndi {
 	background: url(../images/line.jpg) repeat-x left center;
-	margin-top: 27px;
+	margin-bottom: 10px;
 	ol {
 		position: static;
 		margin-bottom: 0;
-		width: 15%;
+		width: 25%;
 		background-color: @body-bg;
 		.center-block();
 		li {
@@ -28,7 +28,10 @@
 		}
 	}
 }
-.recomItem {border: none;}
+.recomItem {
+	border: none;
+	margin-bottom: 0;
+}
 .recomItem-cover {
 	//.show();
 	border: solid 1px #BEBEBE;
@@ -60,6 +63,7 @@
 .recomItem-des {
 	.recomItemDescription;
 	margin: 3px 0;
+	.text-overflow();
 }
 .recomItem-tag {
 	.recomItemDescription;
@@ -76,7 +80,10 @@
 	z-index: 20;
 	.carousel-control {
 		background: white;
-		width: 4%;
+		width: 8%;
+		top: 50%;
+		margin-top: -25px;
+		height: 50px;
 		color: currentcolor;
 		&:hover {
 			.opacity(1);
@@ -85,4 +92,49 @@
 	}
 	.left {.arrowShadow;}
 	.right {.arrowShadow(-6px);}
+}
+.recomItem-name {
+	font-size: @font-size-small;
+	display: block;
+	.text-overflow();
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: @screen-sm-min) {
+	/* ===========================================================
+	首页
+	======================================================== */
+	/* 强档推荐 */
+	.recomIndi {
+		ol {width: 15%;}
+	}
+	.recomItem-name {
+		font-size: @font-size-base;
+	}
+	.recomCon {
+		.carousel-control {
+			margin-top: -50px;
+			height: 100px;
+		}
+	}
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: @screen-md-min) {
+	/* ===========================================================
+	首页
+	======================================================== */
+	/* 强档推荐 */
+	.recomIndi {
+		margin-top: 27px;
+		margin-bottom: 0;
+	}
+	.recomCon {
+		.carousel-control {
+			width: 4%;
+			top: 0;
+			margin-top: 0;
+			height: auto;
+		}
+	}
 }

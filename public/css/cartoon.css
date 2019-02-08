@@ -7,12 +7,12 @@
 }
 .recomIndi {
   background: url(../images/line.jpg) repeat-x left center;
-  margin-top: 27px;
+  margin-bottom: 10px;
 }
 .recomIndi ol {
   position: static;
   margin-bottom: 0;
-  width: 15%;
+  width: 25%;
   background-color: #F8F8F8;
   display: block;
   margin-left: auto;
@@ -29,6 +29,7 @@
 }
 .recomItem {
   border: none;
+  margin-bottom: 0;
 }
 .recomItem-cover {
   border: solid 1px #BEBEBE;
@@ -61,6 +62,9 @@
   color: #999;
   font-size: 12px;
   margin: 3px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .recomItem-tag {
   color: #999;
@@ -76,7 +80,10 @@
 }
 .recomCon .carousel-control {
   background: white;
-  width: 4%;
+  width: 8%;
+  top: 50%;
+  margin-top: -25px;
+  height: 50px;
   color: currentcolor;
 }
 .recomCon .carousel-control:hover {
@@ -91,4 +98,45 @@
 }
 .recomCon .right {
   box-shadow: -6px 0 12px rgba(0, 0, 0, 0.6);
+}
+.recomItem-name {
+  font-size: 12px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) {
+  /* ===========================================================
+	首页
+	======================================================== */
+  /* 强档推荐 */
+  .recomIndi ol {
+    width: 15%;
+  }
+  .recomItem-name {
+    font-size: 14px;
+  }
+  .recomCon .carousel-control {
+    margin-top: -50px;
+    height: 100px;
+  }
+}
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px) {
+  /* ===========================================================
+	首页
+	======================================================== */
+  /* 强档推荐 */
+  .recomIndi {
+    margin-top: 27px;
+    margin-bottom: 0;
+  }
+  .recomCon .carousel-control {
+    width: 4%;
+    top: 0;
+    margin-top: 0;
+    height: auto;
+  }
 }
