@@ -10,6 +10,8 @@ grunt: JavaScript 世界的构建工具。
 grunt-contrib-less: 将 less 编译为 css 的插件。
 grunt-contrib-watch: 监测文件，当它发生改变时，执行预定义的任务。
 grunt-contrib-cssmin: 压缩 css 文件的插件。
+http-proxy-middleware: node.js 设置代理的中间件。
+express: 快速、开放、极简的网络框架。
 ```
 
 ## 路由设计及功能
