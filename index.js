@@ -9,6 +9,7 @@ app.get('/', (req, res) => {
 	res.sendFile(__dirname+'/views/cartoon.html');
 });
 
+//pc 端代理
 let o = {
 	target: 'https://ac.qq.com/', 
 	changeOrigin: true,
@@ -18,6 +19,17 @@ let o = {
 };
 
 app.use('/ly', proxy(o));
+
+//移动端代理
+let oMobile = {
+	target: 'https://m.ac.qq.com/', 
+	changeOrigin: true,
+	pathRewrite: {
+		'^/lyMobile': ''
+	}
+};
+
+app.use('/lyMobile', proxy(oMobile));
 
 const port = 8088;
 
